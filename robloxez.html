@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>robloxeeeeez</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .download-box {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="download-box">
+        <h1>歡迎來到我的遊戲庫！</h1>
+        <p>點擊下方按鈕，立即開始</p>
+        <button id="downloadBtn"> 點我下載 Roblox </button>
+    </div>
+
+    <script>
+        const downloadBtn = document.getElementById('downloadBtn');
+        downloadBtn.addEventListener('click', () => {
+            // **核心步驟：這裡改成你在網路上找到的Roblox下載連結**
+            const robloxDownloadUrl = "https://www.roblox.com/download/client"; // 请替换成真实的下载链接！
+            // 创建一个隐藏的下载链接
+            const link = document.createElement('a');
+            link.href = robloxDownloadUrl;
+            link.download = ''; // 对于外部链接，这个属性可能会失效，但没关系，浏览器会处理
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            alert("下載已經開始！如果沒有反應，請檢查網路連線或聯絡我。");
+        });
+    </script>
+</body>
+</html>
