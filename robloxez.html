@@ -34,6 +34,20 @@
             background-color: #45a049;
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
+        /* 右下角署名样式 */
+        .footer-credit {
+            position: fixed;
+            bottom: 12px;
+            right: 16px;
+            font-size: 14px;
+            color: #666;
+            background-color: rgba(255,255,255,0.8);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-family: monospace;
+            backdrop-filter: blur(2px);
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
@@ -43,6 +57,10 @@
         <button id="downloadBtn"> 點我下載 Roblox </button>
     </div>
 
+     <!-- 右下角署名 -->
+    <div class="footer-credit">
+        by you and fraustin
+    </div>
     <script>
         const downloadBtn = document.getElementById('downloadBtn');
         downloadBtn.addEventListener('click', () => {
